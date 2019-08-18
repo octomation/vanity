@@ -1,0 +1,44 @@
+modules:
+  
+  # mapping:
+  # - prefix -> metaImport.Prefix (cmd/go/internal/get/vcs.go)
+  # - import.url -> metaImport.RepoRoot (cmd/go/internal/get/vcs.go)
+  # - import.vcs -> metaImport.VCS (cmd/go/internal/get/vcs.go)
+
+  - prefix: go.octolab.org
+    import: { url: https://github.com/octolab/pkg.git, vcs: git }
+    tags: [octolab, toolkit, go]
+
+  - prefix: go.octolab.org/toolkit/cli
+    import: { url: https://github.com/octolab/cli.git, vcs: git }
+    tags: [octolab, toolkit, go, cli]
+  
+  - prefix: go.octolab.org/toolkit/protocol
+    import: { url: https://github.com/octolab/protocol.git, vcs: git }
+    tags: [octolab, toolkit, go, protocol, http, rest, rpc, grpc]
+    skip: true
+
+  - prefix: go.octolab.org/platform/evento
+    import: { url: https://github.com/octolab/evento.git, vcs: git }
+    tags: [octolab, platform, go]
+    skip: true
+
+  - prefix: go.octolab.org/ecosystem/click
+    import: { url: https://github.com/kamilsk/click.git, vcs: git }
+    tags: []
+    skip: true
+
+  - prefix: go.octolab.org/ecosystem/forma
+    import: { url: https://github.com/kamilsk/form-api.git, vcs: git }
+    tags: []
+    skip: true
+
+  - prefix: go.octolab.org/ecosystem/guard
+    import: { url: https://github.com/kamilsk/guard.git, vcs: git }
+    tags: []
+    skip: true
+
+  - prefix: go.octolab.org/ecosystem/passport
+    import: { url: https://github.com/kamilsk/passport.git, vcs: git }
+    tags: []
+    skip: true
