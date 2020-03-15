@@ -20,7 +20,10 @@ func main() {
 	root := cmd.New()
 	root.SetOut(os.Stdout)
 	root.SetErr(os.Stderr)
-	root.AddCommand(cobra.NewCompletionCommand(), cobra.NewVersionCommand(version, date, commit))
+	root.AddCommand(
+		cobra.NewCompletionCommand(),
+		cobra.NewVersionCommand(version, date, commit),
+	)
 	if err := root.Execute(); err != nil {
 		os.Exit(1)
 	}

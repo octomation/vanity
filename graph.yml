@@ -11,8 +11,8 @@
   packages:
     - go.octolab.org/errors
     - go.octolab.org/fn
+    - go.octolab.org/fn/timer
     - go.octolab.org/io
-    - go.octolab.org/os/shell
     - go.octolab.org/pointer
     - go.octolab.org/runtime
     - go.octolab.org/safe
@@ -20,7 +20,7 @@
     - go.octolab.org/strings
     - go.octolab.org/sync
     - go.octolab.org/unsafe
-  tags: [octolab, toolkit, go]
+  tags: [go, toolkit, octolab]
 
 - prefix: go.octolab.org/toolkit/cli
   import:
@@ -32,7 +32,8 @@
         file: '{{.Dir}}/{file}#L{line}'
   packages:
     - go.octolab.org/toolkit/cli/cobra
-  tags: [octolab, toolkit, go, cli]
+    - go.octolab.org/toolkit/cli/internal/os/shell
+  tags: [go, toolkit, cli, octolab]
 
 - prefix: go.octolab.org/toolkit/protocol
   import:
@@ -43,9 +44,10 @@
         dir:  '{{.URL}}/tree/master{/dir}'
         file: '{{.Dir}}/{file}#L{line}'
   packages:
-    - go.octolab.org/toolkit/protocol/http
+    - go.octolab.org/toolkit/protocol/http/header
+    - go.octolab.org/toolkit/protocol/http/middleware
     - go.octolab.org/toolkit/protocol/protobuf
-  tags: [octolab, toolkit, go, protocol, http, rest, rpc, grpc]
+  tags: [go, toolkit, protocol, http, rest, rpc, grpc, octolab]
 
 - prefix: go.octolab.org/platform/evento
   import:
@@ -55,7 +57,7 @@
         url:  '{{.Import.URL}}'
         dir:  '{{.URL}}/tree/master{/dir}'
         file: '{{.Dir}}/{file}#L{line}'
-  tags: [octolab, platform, go]
+  tags: [go, octolab, platform]
 
 - prefix: go.octolab.org/ecosystem/click
   import:
@@ -65,7 +67,7 @@
         url:  '{{.Import.URL}}'
         dir:  '{{.URL}}/tree/master{/dir}'
         file: '{{.Dir}}/{file}#L{line}'
-  tags: []
+  tags: [go, octolab, ecosystem]
 
 - prefix: go.octolab.org/ecosystem/forma
   import:
@@ -75,7 +77,7 @@
         url:  '{{.Import.URL}}'
         dir:  '{{.URL}}/tree/master{/dir}'
         file: '{{.Dir}}/{file}#L{line}'
-  tags: []
+  tags: [go, octolab, ecosystem]
 
 - prefix: go.octolab.org/ecosystem/guard
   import:
@@ -85,7 +87,7 @@
         url:  '{{.Import.URL}}'
         dir:  '{{.URL}}/tree/master{/dir}'
         file: '{{.Dir}}/{file}#L{line}'
-  tags: []
+  tags: [go, octolab, ecosystem]
 
 - prefix: go.octolab.org/ecosystem/passport
   import:
@@ -95,4 +97,14 @@
         url:  '{{.Import.URL}}'
         dir:  '{{.URL}}/tree/master{/dir}'
         file: '{{.Dir}}/{file}#L{line}'
-  tags: []
+  tags: [go, octolab, ecosystem]
+
+- prefix: go.octolab.org/ecosystem/tablo
+  import:
+    - url: https://github.com/octopot/tablo
+      vcs: git
+      source:
+        url:  '{{.Import.URL}}'
+        dir:  '{{.URL}}/tree/master{/dir}'
+        file: '{{.Dir}}/{file}#L{line}'
+  tags: [go, octolab, ecosystem]
