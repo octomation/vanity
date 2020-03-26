@@ -1,14 +1,16 @@
 package cmd
 
 import (
-	"log"
 	"os"
 
+	"github.com/spf13/afero"
 	"github.com/spf13/cobra"
 	"go.octolab.org/safe"
+	"go.octolab.org/unsafe"
 	"gopkg.in/yaml.v2"
 
 	"go.octolab.org/vanity/internal"
+	"go.octolab.org/vanity/internal/vanity"
 )
 
 func NewDumpCommand() *cobra.Command {
@@ -19,15 +21,18 @@ func NewDumpCommand() *cobra.Command {
 			if err != nil {
 				return err
 			}
-			defer safe.Close(file, func(err error) { log.Println(err) })
+			defer safe.Close(file, unsafe.Ignore)
 
 			var modules []internal.Module
 			if err := yaml.NewDecoder(file).Decode(&modules); err != nil {
 				return err
 			}
 
-			cmd.Println(modules)
-			return nil
+			wd, err := os.Getwd()
+			if err != nil {
+				return err
+			}
+			return vanity.New(afero.NewOsFs()).PublishAt(wd, modules[:1])
 		},
 	}
 	return cmd
