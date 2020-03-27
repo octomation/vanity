@@ -5,9 +5,9 @@
     - url: https://github.com/octolab/pkg
       vcs: git
       source:
-        url:  '{{.Import.URL}}'
-        dir:  '{{.URL}}/tree/master{/dir}'
-        file: '{{.Dir}}/{file}#L{line}'
+        url:  https://github.com/octolab/pkg
+        dir:  https://github.com/octolab/pkg/tree/master{/dir}
+        file: https://github.com/octolab/pkg/tree/master{/dir}/{file}#L{line}
   packages:
     - go.octolab.org/errors
     - go.octolab.org/fn
@@ -29,9 +29,9 @@
     - url: https://github.com/octolab/cli
       vcs: git
       source:
-        url:  '{{.Import.URL}}'
-        dir:  '{{.URL}}/tree/master{/dir}'
-        file: '{{.Dir}}/{file}#L{line}'
+        url:  https://github.com/octolab/cli
+        dir:  https://github.com/octolab/cli/tree/master{/dir}
+        file: https://github.com/octolab/cli/tree/master{/dir}/{file}#L{line}
   packages:
     - go.octolab.org/toolkit/cli/cobra
     - go.octolab.org/toolkit/cli/internal/os/shell
@@ -42,9 +42,9 @@
     - url: https://github.com/octolab/protocol
       vcs: git
       source:
-        url:  '{{.Import.URL}}'
-        dir:  '{{.URL}}/tree/master{/dir}'
-        file: '{{.Dir}}/{file}#L{line}'
+        url:  https://github.com/octolab/protocol
+        dir:  https://github.com/octolab/protocol/tree/master{/dir}
+        file: https://github.com/octolab/protocol/tree/master{/dir}/{file}#L{line}
   packages:
     - go.octolab.org/toolkit/protocol/http/header
     - go.octolab.org/toolkit/protocol/http/middleware
@@ -56,9 +56,9 @@
     - url: https://github.com/octolab/evento
       vcs: git
       source:
-        url:  '{{.Import.URL}}'
-        dir:  '{{.URL}}/tree/master{/dir}'
-        file: '{{.Dir}}/{file}#L{line}'
+        url:  https://github.com/octolab/evento
+        dir:  https://github.com/octolab/evento/tree/master{/dir}
+        file: https://github.com/octolab/evento/tree/master{/dir}'/{file}#L{line}
   tags: [go, octolab, platform]
 
 - prefix: go.octolab.org/ecosystem/click
@@ -66,9 +66,9 @@
     - url: https://github.com/octopot/click
       vcs: git
       source:
-        url:  '{{.Import.URL}}'
-        dir:  '{{.URL}}/tree/master{/dir}'
-        file: '{{.Dir}}/{file}#L{line}'
+        url:  https://github.com/octopot/click
+        dir:  https://github.com/octopot/click/tree/master{/dir}
+        file: https://github.com/octopot/click/tree/master{/dir}/{file}#L{line}
   tags: [go, octolab, ecosystem]
 
 - prefix: go.octolab.org/ecosystem/forma
@@ -76,9 +76,9 @@
     - url: https://github.com/octopot/forma
       vcs: git
       source:
-        url:  '{{.Import.URL}}'
-        dir:  '{{.URL}}/tree/master{/dir}'
-        file: '{{.Dir}}/{file}#L{line}'
+        url:  https://github.com/octopot/forma
+        dir:  https://github.com/octopot/forma/tree/master{/dir}
+        file: https://github.com/octopot/forma/tree/master{/dir}/{file}#L{line}
   tags: [go, octolab, ecosystem]
 
 - prefix: go.octolab.org/ecosystem/guard
@@ -86,9 +86,9 @@
     - url: https://github.com/octopot/guard
       vcs: git
       source:
-        url:  '{{.Import.URL}}'
-        dir:  '{{.URL}}/tree/master{/dir}'
-        file: '{{.Dir}}/{file}#L{line}'
+        url:  https://github.com/octopot/guard
+        dir:  https://github.com/octopot/guard/tree/master{/dir}
+        file: https://github.com/octopot/guard/tree/master{/dir}{{.Dir}}/{file}#L{line}
   tags: [go, octolab, ecosystem]
 
 - prefix: go.octolab.org/ecosystem/passport
@@ -96,9 +96,9 @@
     - url: https://github.com/octopot/passport
       vcs: git
       source:
-        url:  '{{.Import.URL}}'
-        dir:  '{{.URL}}/tree/master{/dir}'
-        file: '{{.Dir}}/{file}#L{line}'
+        url:  https://github.com/octopot/passport
+        dir:  https://github.com/octopot/passport/tree/master{/dir}
+        file: https://github.com/octopot/passport/tree/master{/dir}/{file}#L{line}
   tags: [go, octolab, ecosystem]
 
 - prefix: go.octolab.org/ecosystem/tablo
@@ -106,7 +106,7 @@
     - url: https://github.com/octopot/tablo
       vcs: git
       source:
-        url:  '{{.Import.URL}}'
-        dir:  '{{.URL}}/tree/master{/dir}'
-        file: '{{.Dir}}/{file}#L{line}'
+        url:  https://github.com/octopot/tablo
+        dir:  https://github.com/octopot/tablo/tree/master{/dir}
+        file: https://github.com/octopot/tablo/tree/master{/dir}/{file}#L{line}
   tags: [go, octolab, ecosystem]

@@ -1,7 +1,6 @@
 package vanity
 
 import (
-	"html/template"
 	"os"
 	"path/filepath"
 	"strings"
@@ -11,45 +10,25 @@ import (
 	"go.octolab.org/vanity/internal"
 )
 
-var tpl = template.Must(template.New("vanity").Parse(`
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="go-import" content="{{ .Package }} {{ .VCS }} {{ .URL }}">
-        <meta name="go-source" content="{{ .Package }} {{ .Source.URL }} {{ .Source.Dir }} {{ .Source.File }}">
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta http-equiv="refresh" content="0; url=https://pkg.go.dev/{{ .Package }}">
-        <title>{{ .Package }}</title>
-    </head>
-    <body>
-        Nothing to see here. Please <a href="https://pkg.go.dev/{{ .Package }}">move along</a>.
-    </body>
-</html>
-`))
-
-func New(fs afero.Fs) *publisher {
-	return &publisher{fs}
+func New(host string, fs afero.Fs) *publisher {
+	return &publisher{host, fs}
 }
 
 type publisher struct {
-	fs afero.Fs
+	host string
+	fs   afero.Fs
 }
 
 func (p *publisher) PublishAt(root string, modules []internal.Module) error {
-	type Source struct {
-		URL, Dir, File string
-	}
-	type Package struct {
-		Package  string
-		VCS, URL string
-		Source
-	}
-
 	for _, module := range modules {
+		if len(module.Import) == 0 {
+			continue
+		}
+
 		for _, pkg := range module.Packages {
 			dir := filepath.Join(append(
 				[]string{root},
-				strings.Split(strings.TrimPrefix(pkg, module.Prefix), "/")...,
+				strings.Split(strings.TrimPrefix(pkg, module.Name), "/")...,
 			)...)
 			if err := p.fs.MkdirAll(dir, os.ModePerm); err != nil {
 				return err
@@ -58,8 +37,24 @@ func (p *publisher) PublishAt(root string, modules []internal.Module) error {
 			if err != nil {
 				return err
 			}
-			if err := tpl.Execute(file, Package{}); err != nil {
-				return err
+
+			// TODO:rfc:#3 add support multiple source
+			for _, imports := range module.Import[:1] {
+				if err := tpl.Execute(file, Meta{
+					Package: pkg,
+					Import: MetaImport{
+						Prefix:   module.Name,
+						VCS:      imports.VCS,
+						RepoRoot: imports.URL,
+					},
+					Source: MetaSource{
+						URL:  imports.Source.URL,
+						Dir:  imports.Source.Dir,
+						File: imports.Source.File,
+					},
+				}); err != nil {
+					return err
+				}
 			}
 		}
 	}

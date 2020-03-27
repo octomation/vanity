@@ -14,10 +14,14 @@ import (
 )
 
 func NewDumpCommand() *cobra.Command {
+	const (
+		file = "graph.yml"
+		host = "go.octolab.org"
+	)
 	cmd := &cobra.Command{
 		Use: "dump",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			file, err := os.Open("graph.yml")
+			file, err := os.Open(file)
 			if err != nil {
 				return err
 			}
@@ -32,7 +36,7 @@ func NewDumpCommand() *cobra.Command {
 			if err != nil {
 				return err
 			}
-			return vanity.New(afero.NewOsFs()).PublishAt(wd, modules[:1])
+			return vanity.New(host, afero.NewOsFs()).PublishAt(wd, modules)
 		},
 	}
 	return cmd
