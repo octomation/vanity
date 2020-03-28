@@ -2,8 +2,7 @@ package vanity
 
 import "html/template"
 
-var tpl = template.Must(template.New("vanity").Parse(`
-<!DOCTYPE html>
+var tpl = template.Must(template.New("vanity").Parse(`<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta name="go-import" content="{{.Import.Prefix}} {{.Import.VCS}} {{.Import.RepoRoot}}">
