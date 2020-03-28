@@ -15,7 +15,7 @@ import (
 
 func NewDumpCommand() *cobra.Command {
 	const (
-		file = "graph.yml"
+		file = "modules.yml"
 		host = "go.octolab.org"
 	)
 	cmd := &cobra.Command{

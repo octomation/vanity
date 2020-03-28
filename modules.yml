@@ -22,7 +22,7 @@
     - go.octolab.org/strings/numd
     - go.octolab.org/sync
     - go.octolab.org/unsafe
-  tags: [go, toolkit, octolab]
+  tags: [octolab, toolkit, go]
 
 - prefix: go.octolab.org/toolkit/cli
   import:
@@ -35,7 +35,20 @@
   packages:
     - go.octolab.org/toolkit/cli/cobra
     - go.octolab.org/toolkit/cli/internal/os/shell
-  tags: [go, toolkit, cli, octolab]
+  tags: [octolab, toolkit, go, cli]
+
+- prefix: go.octolab.org/toolkit/config
+  import:
+    - url: https://github.com/octolab/config
+      vcs: git
+      source:
+        url:  https://github.com/octolab/config
+        dir:  https://github.com/octolab/config/tree/master{/dir}
+        file: https://github.com/octolab/config/tree/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolkit/config
+    - go.octolab.org/toolkit/config/http
+  tags: [octolab, toolkit, go, config, http]
 
 - prefix: go.octolab.org/toolkit/protocol
   import:
@@ -49,7 +62,7 @@
     - go.octolab.org/toolkit/protocol/http/header
     - go.octolab.org/toolkit/protocol/http/middleware
     - go.octolab.org/toolkit/protocol/protobuf
-  tags: [go, toolkit, protocol, http, rest, rpc, grpc, octolab]
+  tags: [octolab, toolkit, go, protocol, http, rest, rpc, grpc]
 
 - prefix: go.octolab.org/platform/evento
   import:

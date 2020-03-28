@@ -19,7 +19,7 @@ type publisher struct {
 	fs   afero.Fs
 }
 
-func (p *publisher) PublishAt(root string, modules []internal.Module) error {
+func (publisher *publisher) PublishAt(root string, modules []internal.Module) error {
 	for _, module := range modules {
 		if len(module.Import) == 0 {
 			continue
@@ -28,12 +28,12 @@ func (p *publisher) PublishAt(root string, modules []internal.Module) error {
 		for _, pkg := range module.Packages {
 			dir := filepath.Join(append(
 				[]string{root},
-				strings.Split(strings.TrimPrefix(pkg, module.Name), "/")...,
+				strings.Split(strings.TrimPrefix(pkg, publisher.host), "/")...,
 			)...)
-			if err := p.fs.MkdirAll(dir, os.ModePerm); err != nil {
+			if err := publisher.fs.MkdirAll(dir, os.ModePerm); err != nil {
 				return err
 			}
-			file, err := p.fs.Create(filepath.Join(dir, "index.html"))
+			file, err := publisher.fs.Create(filepath.Join(dir, "index.html"))
 			if err != nil {
 				return err
 			}
