@@ -64,6 +64,33 @@
     - go.octolab.org/toolkit/protocol/protobuf
   tags: [octolab, toolkit, go, protocol, http, rest, rpc, grpc]
 
+- prefix: go.octolab.org/toolset/parallel
+  import:
+    - url: https://github.com/octolab/parallel
+      vcs: git
+      source:
+        url:  https://github.com/octolab/parallel
+        dir:  https://github.com/octolab/parallel/tree/master{/dir}
+        file: https://github.com/octolab/parallel/tree/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolset/parallel
+    - go.octolab.org/toolset/parallel/internal/cmd
+  tags: [octolab, toolset, go, cli, tool, parallel, execution]
+
+- prefix: go.octolab.org/toolset/try
+  import:
+    - url: https://github.com/octolab/try
+      vcs: git
+      source:
+        url:  https://github.com/octolab/try
+        dir:  https://github.com/octolab/try/tree/master{/dir}
+        file: https://github.com/octolab/try/tree/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolset/try
+    - go.octolab.org/toolset/try/generate
+    - go.octolab.org/toolset/try/internal/cmd
+  tags: [octolab, toolset, go, cli, tool, retry, repeat, execution]
+
 - prefix: go.octolab.org/platform/evento
   import:
     - url: https://github.com/octolab/evento
