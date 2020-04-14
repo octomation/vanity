@@ -9,7 +9,7 @@ github.com/pmezard/go-difflib/difflib
 # github.com/spf13/afero v1.2.2
 github.com/spf13/afero
 github.com/spf13/afero/mem
-# github.com/spf13/cobra v0.0.6
+# github.com/spf13/cobra v1.0.0
 github.com/spf13/cobra
 # github.com/spf13/pflag v1.0.3
 github.com/spf13/pflag
@@ -20,10 +20,10 @@ github.com/stretchr/testify
 github.com/stretchr/testify/assert
 github.com/stretchr/testify/http
 github.com/stretchr/testify/mock
-# go.octolab.org v0.0.17
+# go.octolab.org v0.0.22
 go.octolab.org/safe
 go.octolab.org/unsafe
-# go.octolab.org/toolkit/cli v0.0.7
+# go.octolab.org/toolkit/cli v0.0.9
 go.octolab.org/toolkit/cli/cobra
 go.octolab.org/toolkit/cli/internal/os/shell
 # golang.org/x/text v0.3.0

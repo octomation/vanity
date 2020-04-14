@@ -9,7 +9,9 @@
         dir:  https://github.com/octolab/pkg/tree/master{/dir}
         file: https://github.com/octolab/pkg/tree/master{/dir}/{file}#L{line}
   packages:
+    - go.octolab.org/async
     - go.octolab.org/errors
+    - go.octolab.org/errors/internal/classifier
     - go.octolab.org/fn
     - go.octolab.org/fn/timer
     - go.octolab.org/io
@@ -21,6 +23,7 @@
     - go.octolab.org/strings
     - go.octolab.org/strings/numd
     - go.octolab.org/sync
+    - go.octolab.org/time
     - go.octolab.org/unsafe
   tags: [octolab, toolkit, go]
 
@@ -61,6 +64,10 @@
   packages:
     - go.octolab.org/toolkit/protocol/http/header
     - go.octolab.org/toolkit/protocol/http/middleware
+    - go.octolab.org/toolkit/protocol/http/middleware/chi
+    - go.octolab.org/toolkit/protocol/http/router
+    - go.octolab.org/toolkit/protocol/http/router/rest
+    - go.octolab.org/toolkit/protocol/http/server
     - go.octolab.org/toolkit/protocol/protobuf
   tags: [octolab, toolkit, go, protocol, http, rest, rpc, grpc]
 
