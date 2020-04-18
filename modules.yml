@@ -21,6 +21,7 @@
     - go.octolab.org/sequence
     - go.octolab.org/sequence/generator
     - go.octolab.org/strings
+    - go.octolab.org/strings/bytes
     - go.octolab.org/strings/numd
     - go.octolab.org/sync
     - go.octolab.org/time
