@@ -1,17 +1,21 @@
 # sourced by https://github.com/octomation/makefiles
 
 .DEFAULT_GOAL = test-with-coverage
+GO_VERSIONS   = 1.11 1.12 1.13 1.14
 
-SHELL = /bin/bash -euo pipefail
+SHELL := /bin/bash -euo pipefail # `explain set -euo pipefail`
+
+OS   = $(shell uname -s)
+ARCH = $(shell uname -m)
 
 GO111MODULE = on
 GOFLAGS     = -mod=vendor
 GOPRIVATE   = go.octolab.net
 GOPROXY     = direct
 LOCAL       = $(MODULE)
-MODULE      = `go list -m`
-PACKAGES    = `go list ./... 2> /dev/null`
-PATHS       = $(shell echo $(PACKAGES) | sed -e "s|$(MODULE)/\{0,1\}||g")
+MODULE      = `GO111MODULE=on go list -m $(GOFLAGS)`
+PACKAGES    = `GO111MODULE=on go list $(GOFLAGS) ./...`
+PATHS       = $(shell echo $(PACKAGES) | sed -e "s|$(MODULE)/||g" | sed -e "s|$(MODULE)|$(PWD)/*.go|g")
 TIMEOUT     = 1s
 
 ifeq (, $(PACKAGES))
@@ -183,10 +187,12 @@ toolset:
 		go generate tools.go; \
 	)
 
+ifdef GO_VERSIONS
+
 define go_tpl
 .PHONY: go$(1)
 go$(1):
-	docker run \
+	@docker run \
 		--rm -it \
 		-v $(PWD):/src \
 		-w /src \
@@ -194,7 +200,9 @@ go$(1):
 endef
 
 render_go_tpl = $(eval $(call go_tpl,$(version)))
-$(foreach version,1.11 1.12 1.13 1.14,$(render_go_tpl))
+$(foreach version,$(GO_VERSIONS),$(render_go_tpl))
+
+endif
 
 
 .PHONY: clean
