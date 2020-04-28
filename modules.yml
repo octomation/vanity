@@ -117,7 +117,37 @@
         url:  https://github.com/octopot/click
         dir:  https://github.com/octopot/click/tree/master{/dir}
         file: https://github.com/octopot/click/tree/master{/dir}/{file}#L{line}
-  tags: [go, octolab, ecosystem]
+  packages:
+    - go.octolab.org/ecosystem/click
+    - go.octolab.org/ecosystem/click/cmd/client
+    - go.octolab.org/ecosystem/click/cmd/server
+    - go.octolab.org/ecosystem/click/internal/cmd
+    - go.octolab.org/ecosystem/click/internal/config
+    - go.octolab.org/ecosystem/click/internal/domain
+    - go.octolab.org/ecosystem/click/internal/errors
+    - go.octolab.org/ecosystem/click/internal/generated
+    - go.octolab.org/ecosystem/click/internal/server
+    - go.octolab.org/ecosystem/click/internal/server/grpc
+    - go.octolab.org/ecosystem/click/internal/server/grpc/middleware
+    - go.octolab.org/ecosystem/click/internal/server/router
+    - go.octolab.org/ecosystem/click/internal/server/router/chi
+    - go.octolab.org/ecosystem/click/internal/server/router/chi/middleware
+    - go.octolab.org/ecosystem/click/internal/service
+    - go.octolab.org/ecosystem/click/internal/service/types
+    - go.octolab.org/ecosystem/click/internal/static
+    - go.octolab.org/ecosystem/click/internal/storage
+    - go.octolab.org/ecosystem/click/internal/storage/executor
+    - go.octolab.org/ecosystem/click/internal/storage/executor/internal/postgres
+    - go.octolab.org/ecosystem/click/internal/storage/query
+    - go.octolab.org/ecosystem/click/internal/storage/types
+    - go.octolab.org/ecosystem/click/internal/transfer
+    - go.octolab.org/ecosystem/click/internal/transfer/api/v1
+    - go.octolab.org/ecosystem/click/internal/transport
+    - go.octolab.org/ecosystem/click/internal/transport/grpc/middleware
+    - go.octolab.org/ecosystem/click/internal/transport/grpc/protobuf
+    - go.octolab.org/ecosystem/click/internal/transport/http/monitor
+    - go.octolab.org/ecosystem/click/internal/transport/http/profiler
+  tags: [octolab, ecosystem, go, service]
 
 - prefix: go.octolab.org/ecosystem/forma
   import:
@@ -127,7 +157,38 @@
         url:  https://github.com/octopot/forma
         dir:  https://github.com/octopot/forma/tree/master{/dir}
         file: https://github.com/octopot/forma/tree/master{/dir}/{file}#L{line}
-  tags: [go, octolab, ecosystem]
+  packages:
+    - go.octolab.org/ecosystem/forma/cmd/client
+    - go.octolab.org/ecosystem/forma/cmd/server
+    - go.octolab.org/ecosystem/forma/internal/cmd
+    - go.octolab.org/ecosystem/forma/internal/cmd/legacy
+    - go.octolab.org/ecosystem/forma/internal/config
+    - go.octolab.org/ecosystem/forma/internal/domain
+    - go.octolab.org/ecosystem/forma/internal/errors
+    - go.octolab.org/ecosystem/forma/internal/generated
+    - go.octolab.org/ecosystem/forma/internal/server
+    - go.octolab.org/ecosystem/forma/internal/server/grpc
+    - go.octolab.org/ecosystem/forma/internal/server/grpc/middleware
+    - go.octolab.org/ecosystem/forma/internal/server/middleware
+    - go.octolab.org/ecosystem/forma/internal/server/router
+    - go.octolab.org/ecosystem/forma/internal/server/router/chi
+    - go.octolab.org/ecosystem/forma/internal/server/router/chi/middleware
+    - go.octolab.org/ecosystem/forma/internal/service
+    - go.octolab.org/ecosystem/forma/internal/service/types
+    - go.octolab.org/ecosystem/forma/internal/static
+    - go.octolab.org/ecosystem/forma/internal/storage
+    - go.octolab.org/ecosystem/forma/internal/storage/executor
+    - go.octolab.org/ecosystem/forma/internal/storage/executor/internal/postgres
+    - go.octolab.org/ecosystem/forma/internal/storage/query
+    - go.octolab.org/ecosystem/forma/internal/storage/types
+    - go.octolab.org/ecosystem/forma/internal/transfer/api/v1
+    - go.octolab.org/ecosystem/forma/internal/transfer/encoding
+    - go.octolab.org/ecosystem/forma/internal/transport
+    - go.octolab.org/ecosystem/forma/internal/transport/grpc/middleware
+    - go.octolab.org/ecosystem/forma/internal/transport/grpc/protobuf
+    - go.octolab.org/ecosystem/forma/internal/transport/http/monitor
+    - go.octolab.org/ecosystem/forma/internal/transport/http/profiler
+  tags: [octolab, ecosystem, go, service]
 
 - prefix: go.octolab.org/ecosystem/guard
   import:
@@ -137,7 +198,37 @@
         url:  https://github.com/octopot/guard
         dir:  https://github.com/octopot/guard/tree/master{/dir}
         file: https://github.com/octopot/guard/tree/master{/dir}{{.Dir}}/{file}#L{line}
-  tags: [go, octolab, ecosystem]
+  packages:
+    - go.octolab.org/ecosystem/guard/cmd/client
+    - go.octolab.org/ecosystem/guard/cmd/server
+    - go.octolab.org/ecosystem/guard/internal/cmd
+    - go.octolab.org/ecosystem/guard/internal/cmd/legacy
+    - go.octolab.org/ecosystem/guard/internal/config
+    - go.octolab.org/ecosystem/guard/internal/generated
+    - go.octolab.org/ecosystem/guard/internal/platform/errors
+    - go.octolab.org/ecosystem/guard/internal/platform/logger
+    - go.octolab.org/ecosystem/guard/internal/service/guard
+    - go.octolab.org/ecosystem/guard/internal/service/guard/internal
+    - go.octolab.org/ecosystem/guard/internal/service/types
+    - go.octolab.org/ecosystem/guard/internal/service/types/request
+    - go.octolab.org/ecosystem/guard/internal/service/types/response
+    - go.octolab.org/ecosystem/guard/internal/storage
+    - go.octolab.org/ecosystem/guard/internal/storage/internal
+    - go.octolab.org/ecosystem/guard/internal/storage/internal/postgres
+    - go.octolab.org/ecosystem/guard/internal/storage/migrations
+    - go.octolab.org/ecosystem/guard/internal/storage/query
+    - go.octolab.org/ecosystem/guard/internal/storage/types
+    - go.octolab.org/ecosystem/guard/internal/transport
+    - go.octolab.org/ecosystem/guard/internal/transport/grpc/gateway
+    - go.octolab.org/ecosystem/guard/internal/transport/grpc/middleware
+    - go.octolab.org/ecosystem/guard/internal/transport/grpc/protobuf
+    - go.octolab.org/ecosystem/guard/internal/transport/grpc/rpc
+    - go.octolab.org/ecosystem/guard/internal/transport/http/api
+    - go.octolab.org/ecosystem/guard/internal/transport/http/api/internal
+    - go.octolab.org/ecosystem/guard/internal/transport/http/api/internal/chi
+    - go.octolab.org/ecosystem/guard/internal/transport/http/monitor
+    - go.octolab.org/ecosystem/guard/internal/transport/http/profiler
+  tags: [octolab, ecosystem, go, service]
 
 - prefix: go.octolab.org/ecosystem/passport
   import:
@@ -147,7 +238,29 @@
         url:  https://github.com/octopot/passport
         dir:  https://github.com/octopot/passport/tree/master{/dir}
         file: https://github.com/octopot/passport/tree/master{/dir}/{file}#L{line}
-  tags: [go, octolab, ecosystem]
+  packages:
+    - go.octolab.org/ecosystem/passport/cmd/client
+    - go.octolab.org/ecosystem/passport/cmd/server
+    - go.octolab.org/ecosystem/passport/env/test/smoke
+    - go.octolab.org/ecosystem/passport/internal/cmd
+    - go.octolab.org/ecosystem/passport/internal/config
+    - go.octolab.org/ecosystem/passport/internal/domain
+    - go.octolab.org/ecosystem/passport/internal/errors
+    - go.octolab.org/ecosystem/passport/internal/generated
+    - go.octolab.org/ecosystem/passport/internal/protocol/http
+    - go.octolab.org/ecosystem/passport/internal/protocol/http2
+    - go.octolab.org/ecosystem/passport/internal/protocol/queue
+    - go.octolab.org/ecosystem/passport/internal/protocol/signal
+    - go.octolab.org/ecosystem/passport/internal/server
+    - go.octolab.org/ecosystem/passport/internal/server/router
+    - go.octolab.org/ecosystem/passport/internal/server/router/chi
+    - go.octolab.org/ecosystem/passport/internal/service
+    - go.octolab.org/ecosystem/passport/internal/static
+    - go.octolab.org/ecosystem/passport/internal/storage
+    - go.octolab.org/ecosystem/passport/internal/storage/executor
+    - go.octolab.org/ecosystem/passport/internal/storage/executor/postgres
+    - go.octolab.org/ecosystem/passport/internal/transfer/api/v1/tracker
+  tags: [octolab, ecosystem, go, service]
 
 - prefix: go.octolab.org/ecosystem/tablo
   import:
@@ -157,4 +270,15 @@
         url:  https://github.com/octopot/tablo
         dir:  https://github.com/octopot/tablo/tree/master{/dir}
         file: https://github.com/octopot/tablo/tree/master{/dir}/{file}#L{line}
-  tags: [go, octolab, ecosystem]
+  packages:
+    - go.octolab.org/ecosystem/tablo/cmd/client
+    - go.octolab.org/ecosystem/tablo/cmd/server
+    - go.octolab.org/ecosystem/tablo/internal/config
+    - go.octolab.org/ecosystem/tablo/internal/generated/api/v1
+    - go.octolab.org/ecosystem/tablo/internal/generated/api/v2
+    - go.octolab.org/ecosystem/tablo/internal/model
+    - go.octolab.org/ecosystem/tablo/internal/server/v1
+    - go.octolab.org/ecosystem/tablo/internal/service/github
+    - go.octolab.org/ecosystem/tablo/internal/service/trello
+    - go.octolab.org/ecosystem/tablo/internal/storage
+  tags: [octolab, ecosystem, go, service]
