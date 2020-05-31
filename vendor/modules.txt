@@ -13,14 +13,11 @@ github.com/spf13/afero/mem
 github.com/spf13/cobra
 # github.com/spf13/pflag v1.0.3
 github.com/spf13/pflag
-# github.com/stretchr/objx v0.1.1
-github.com/stretchr/objx
-# github.com/stretchr/testify v1.5.1
-github.com/stretchr/testify
+# github.com/stretchr/testify v1.6.0
 github.com/stretchr/testify/assert
-github.com/stretchr/testify/http
-github.com/stretchr/testify/mock
-# go.octolab.org v0.0.22
+github.com/stretchr/testify/require
+# go.octolab.org v0.0.27
+go.octolab.org/errors
 go.octolab.org/safe
 go.octolab.org/unsafe
 # go.octolab.org/toolkit/cli v0.0.9
@@ -29,5 +26,7 @@ go.octolab.org/toolkit/cli/internal/os/shell
 # golang.org/x/text v0.3.0
 golang.org/x/text/transform
 golang.org/x/text/unicode/norm
-# gopkg.in/yaml.v2 v2.2.8
+# gopkg.in/yaml.v2 v2.3.0
 gopkg.in/yaml.v2
+# gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+gopkg.in/yaml.v3
