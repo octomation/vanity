@@ -2,7 +2,7 @@
 
 .DEFAULT_GOAL = test-with-coverage
 GIT_HOOKS     = post-merge pre-commit pre-push
-GO_VERSIONS   = 1.13 1.14
+GO_VERSIONS   = 1.11 1.12 1.13 1.14
 
 SHELL := /bin/bash -euo pipefail # `explain set -euo pipefail`
 
@@ -126,69 +126,6 @@ test-with-coverage:
 test-with-coverage-profile:
 	@go test -cover -covermode count -coverprofile c.out -timeout $(TIMEOUT) $(PACKAGES)
 
-BINARY  = $(BINPATH)/$(shell basename $(MAIN))
-BINPATH = $(PWD)/bin/$(OS)/$(ARCH)
-COMMIT  = $(shell git rev-parse --verify HEAD)
-DATE    = $(shell date +%Y-%m-%dT%T%Z)
-LDFLAGS = -ldflags "-s -w -X main.commit=$(COMMIT) -X main.date=$(DATE)"
-MAIN    = $(MODULE)
-
-export GOBIN := $(BINPATH)
-export PATH  := $(BINPATH):$(PATH)
-
-.PHONY: build-env
-build-env:
-	@echo "BINARY:      $(BINARY)"
-	@echo "BINPATH:     $(BINPATH)"
-	@echo "COMMIT:      $(COMMIT)"
-	@echo "DATE:        $(DATE)"
-	@echo "GOBIN:       `go env GOBIN`"
-	@echo "LDFLAGS:     $(LDFLAGS)"
-	@echo "MAIN:        $(MAIN)"
-	@echo "PATH:        $$PATH"
-
-.PHONY: build
-build:
-	@go build -o $(BINARY) $(LDFLAGS) $(MAIN)
-
-.PHONY: build-clean
-build-clean:
-	@rm -f $(BINARY)
-
-.PHONY: install
-install:
-	@go install $(LDFLAGS) $(MAIN)
-
-.PHONY: install-clean
-install-clean:
-	@go clean -cache
-
-.PHONY: dist-check
-dist-check:
-	@goreleaser --snapshot --skip-publish --rm-dist
-
-.PHONY: dist-dump
-dist-dump:
-	@godownloader .goreleaser.yml > bin/install
-
-TOOLFLAGS = -mod=
-
-.PHONY: tools-env
-tools-env:
-	@echo "GOBIN:       `go env GOBIN`"
-	@echo "TOOLFLAGS:   $(TOOLFLAGS)"
-
-.PHONY: toolset
-toolset:
-	@( \
-		GOFLAGS=$(TOOLFLAGS); \
-		cd tools; \
-		go mod tidy; \
-		go mod download; \
-		if [[ "`go env GOFLAGS`" =~ -mod=vendor ]]; then go mod vendor; fi; \
-		go generate tools.go; \
-	)
-
 ifdef GIT_HOOKS
 
 .PHONY: hooks
@@ -229,13 +166,13 @@ endif
 init: deps test lint hooks
 
 .PHONY: clean
-clean: build-clean deps-clean install-clean test-clean
+clean: deps-clean test-clean
 
 .PHONY: deps
-deps: deps-fetch toolset
+deps: deps-fetch
 
 .PHONY: env
-env: go-env build-env tools-env
+env: go-env
 
 .PHONY: format
 format: go-fmt
@@ -244,7 +181,7 @@ format: go-fmt
 generate: go-generate format
 
 .PHONY: refresh
-refresh: deps-tidy update deps generate format test build
+refresh: deps-tidy update deps generate format test
 
 .PHONY: update
 update: deps-update

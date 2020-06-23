@@ -18,7 +18,7 @@ func NewDumpCommand() *cobra.Command {
 		file = "modules.yml"
 		host = "go.octolab.org"
 	)
-	cmd := &cobra.Command{
+	command := cobra.Command{
 		Use: "dump",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			file, err := os.Open(file)
@@ -39,5 +39,5 @@ func NewDumpCommand() *cobra.Command {
 			return vanity.New(host, afero.NewOsFs()).PublishAt(wd, modules)
 		},
 	}
-	return cmd
+	return &command
 }

@@ -38,6 +38,7 @@
         file: https://github.com/octolab/cli/tree/master{/dir}/{file}#L{line}
   packages:
     - go.octolab.org/toolkit/cli/cobra
+    - go.octolab.org/toolkit/cli/debugger
     - go.octolab.org/toolkit/cli/internal/os/shell
   tags: [octolab, toolkit, go, cli]
 
@@ -63,6 +64,7 @@
         dir:  https://github.com/octolab/protocol/tree/master{/dir}
         file: https://github.com/octolab/protocol/tree/master{/dir}/{file}#L{line}
   packages:
+    - go.octolab.org/toolkit/protocol/http
     - go.octolab.org/toolkit/protocol/http/header
     - go.octolab.org/toolkit/protocol/http/middleware
     - go.octolab.org/toolkit/protocol/http/middleware/chi
