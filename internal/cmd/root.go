@@ -12,6 +12,8 @@ func New() *cobra.Command {
 		SilenceErrors: false,
 		SilenceUsage:  true,
 	}
+
 	command.AddCommand(NewDumpCommand())
+
 	return &command
 }
