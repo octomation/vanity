@@ -10,8 +10,9 @@
         file: https://github.com/octolab/pkg/tree/master{/dir}/{file}#L{line}
   packages:
     - go.octolab.org/async
+    - go.octolab.org/context
+    - go.octolab.org/encoding
     - go.octolab.org/errors
-    - go.octolab.org/errors/internal/classifier
     - go.octolab.org/fn
     - go.octolab.org/fn/timer
     - go.octolab.org/io
@@ -26,7 +27,7 @@
     - go.octolab.org/sync
     - go.octolab.org/time
     - go.octolab.org/unsafe
-  tags: [octolab, toolkit, go]
+  tags: [ octolab, toolkit, go ]
 
 - prefix: go.octolab.org/toolkit/cli
   import:
@@ -39,8 +40,7 @@
   packages:
     - go.octolab.org/toolkit/cli/cobra
     - go.octolab.org/toolkit/cli/debugger
-    - go.octolab.org/toolkit/cli/internal/os/shell
-  tags: [octolab, toolkit, go, cli]
+  tags: [ octolab, toolkit, go, cli ]
 
 - prefix: go.octolab.org/toolkit/config
   import:
@@ -53,7 +53,7 @@
   packages:
     - go.octolab.org/toolkit/config
     - go.octolab.org/toolkit/config/http
-  tags: [octolab, toolkit, go, config, http]
+  tags: [ octolab, toolkit, go, config, http ]
 
 - prefix: go.octolab.org/toolkit/protocol
   import:
@@ -72,7 +72,26 @@
     - go.octolab.org/toolkit/protocol/http/router/rest
     - go.octolab.org/toolkit/protocol/http/server
     - go.octolab.org/toolkit/protocol/protobuf
-  tags: [octolab, toolkit, go, protocol, http, rest, rpc, grpc]
+  tags: [ octolab, toolkit, go, protocol, http, rest, rpc, grpc ]
+
+- prefix: go.octolab.org/toolset/maintainer
+  import:
+    - url: https://github.com/octomation/maintainer
+      vcs: git
+      source:
+        url:  https://github.com/octomation/maintainer
+        dir:  https://github.com/octomation/maintainer/tree/master{/dir}
+        file: https://github.com/octomation/maintainer/tree/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolset/maintainer
+    - go.octolab.org/toolset/maintainer/internal
+    - go.octolab.org/toolset/maintainer/internal/cmd
+    - go.octolab.org/toolset/maintainer/internal/cmd/labels
+    - go.octolab.org/toolset/maintainer/internal/cnf
+    - go.octolab.org/toolset/maintainer/internal/entity
+    - go.octolab.org/toolset/maintainer/internal/errors
+    - go.octolab.org/toolset/maintainer/internal/github
+  tags: [ octolab, toolset, go, cli, tool, github ]
 
 - prefix: go.octolab.org/toolset/parallel
   import:
@@ -85,7 +104,7 @@
   packages:
     - go.octolab.org/toolset/parallel
     - go.octolab.org/toolset/parallel/internal/cmd
-  tags: [octolab, toolset, go, cli, tool, parallel, execution]
+  tags: [ octolab, toolset, go, cli, tool, parallel, execution ]
 
 - prefix: go.octolab.org/toolset/try
   import:
@@ -99,7 +118,7 @@
     - go.octolab.org/toolset/try
     - go.octolab.org/toolset/try/generate
     - go.octolab.org/toolset/try/internal/cmd
-  tags: [octolab, toolset, go, cli, tool, retry, repeat, execution]
+  tags: [ octolab, toolset, go, cli, tool, retry, repeat, execution ]
 
 - prefix: go.octolab.org/platform/evento
   import:
@@ -109,7 +128,7 @@
         url:  https://github.com/octolab/evento
         dir:  https://github.com/octolab/evento/tree/master{/dir}
         file: https://github.com/octolab/evento/tree/master{/dir}'/{file}#L{line}
-  tags: [go, octolab, platform]
+  tags: [ go, octolab, platform ]
 
 - prefix: go.octolab.org/ecosystem/click
   import:
@@ -149,7 +168,7 @@
     - go.octolab.org/ecosystem/click/internal/transport/grpc/protobuf
     - go.octolab.org/ecosystem/click/internal/transport/http/monitor
     - go.octolab.org/ecosystem/click/internal/transport/http/profiler
-  tags: [octolab, ecosystem, go, service]
+  tags: [ octolab, ecosystem, go, service ]
 
 - prefix: go.octolab.org/ecosystem/forma
   import:
@@ -190,7 +209,7 @@
     - go.octolab.org/ecosystem/forma/internal/transport/grpc/protobuf
     - go.octolab.org/ecosystem/forma/internal/transport/http/monitor
     - go.octolab.org/ecosystem/forma/internal/transport/http/profiler
-  tags: [octolab, ecosystem, go, service]
+  tags: [ octolab, ecosystem, go, service ]
 
 - prefix: go.octolab.org/ecosystem/guard
   import:
@@ -230,7 +249,7 @@
     - go.octolab.org/ecosystem/guard/internal/transport/http/api/internal/chi
     - go.octolab.org/ecosystem/guard/internal/transport/http/monitor
     - go.octolab.org/ecosystem/guard/internal/transport/http/profiler
-  tags: [octolab, ecosystem, go, service]
+  tags: [ octolab, ecosystem, go, service ]
 
 - prefix: go.octolab.org/ecosystem/passport
   import:
@@ -262,7 +281,7 @@
     - go.octolab.org/ecosystem/passport/internal/storage/executor
     - go.octolab.org/ecosystem/passport/internal/storage/executor/postgres
     - go.octolab.org/ecosystem/passport/internal/transfer/api/v1/tracker
-  tags: [octolab, ecosystem, go, service]
+  tags: [ octolab, ecosystem, go, service ]
 
 - prefix: go.octolab.org/ecosystem/tablo
   import:
@@ -283,4 +302,4 @@
     - go.octolab.org/ecosystem/tablo/internal/service/github
     - go.octolab.org/ecosystem/tablo/internal/service/trello
     - go.octolab.org/ecosystem/tablo/internal/storage
-  tags: [octolab, ecosystem, go, service]
+  tags: [ octolab, ecosystem, go, service ]
