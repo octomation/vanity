@@ -86,9 +86,14 @@
     - go.octolab.org/toolset/maintainer
     - go.octolab.org/toolset/maintainer/internal
     - go.octolab.org/toolset/maintainer/internal/cmd
-    - go.octolab.org/toolset/maintainer/internal/cmd/labels
+    - go.octolab.org/toolset/maintainer/internal/cmd/github
+    - go.octolab.org/toolset/maintainer/internal/cmd/github/labels
+    - go.octolab.org/toolset/maintainer/internal/cmd/golang
+    - go.octolab.org/toolset/maintainer/internal/cmd/makefile
     - go.octolab.org/toolset/maintainer/internal/cnf
-    - go.octolab.org/toolset/maintainer/internal/entity
+    - go.octolab.org/toolset/maintainer/internal/entity/github
+    - go.octolab.org/toolset/maintainer/internal/entity/golang
+    - go.octolab.org/toolset/maintainer/internal/entity/golang/vanity
     - go.octolab.org/toolset/maintainer/internal/errors
     - go.octolab.org/toolset/maintainer/internal/github
   tags: [ octolab, toolset, go, cli, tool, github ]
