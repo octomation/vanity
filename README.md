@@ -1,12 +1,12 @@
 > # 🤴 go.octolab.org
 >
-> Vanity URLs for Go projects.
+> Vanity URLs for OctoLab's Go modules.
 
-[![Template][template.icon]][template.page]
+[![Mirror][mirror.icon]][mirror.page]
 
 ---
 
 made with ❤️ for everyone
 
-[template.page]:    https://github.com/octomation/go-tool
-[template.icon]:    https://img.shields.io/badge/template-go--tool-blue
+[mirror.page]:      https://bitbucket.org/kamilsk/vanity
+[mirror.icon]:      https://img.shields.io/badge/mirror-bitbucket-blue
