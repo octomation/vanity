@@ -29,6 +29,18 @@
     - go.octolab.org/unsafe
   tags: [ octolab, toolkit, go ]
 
+- prefix: go.octolab.org/propaganda
+  import:
+    - url: https://github.com/octolab/propaganda
+      vcs: git
+      source:
+        url:  https://github.com/octolab/propaganda
+        dir:  https://github.com/octolab/propaganda/tree/master{/dir}
+        file: https://github.com/octolab/propaganda/tree/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/propaganda
+  tags: [ octolab, go, module, http, middleware, round-trip, headers ]
+
 - prefix: go.octolab.org/toolkit/cli
   import:
     - url: https://github.com/octolab/cli
