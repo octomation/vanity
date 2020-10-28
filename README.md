@@ -4,6 +4,10 @@
 
 [![Mirror][mirror.icon]][mirror.page]
 
+## 🔗 Dependencies
+
+- [Install `maintainer` tool](https://github.com/octomation/maintainer#-installation).
+
 ---
 
 made with ❤️ for everyone
