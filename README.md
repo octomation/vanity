@@ -8,9 +8,7 @@
 
 - [Install `maintainer` tool](https://github.com/octomation/maintainer#-installation).
 
----
-
-made with ❤️ for everyone
+<p align="right">made with ❤️ for everyone</p>
 
 [mirror.page]:      https://bitbucket.org/kamilsk/vanity
 [mirror.icon]:      https://img.shields.io/badge/mirror-bitbucket-blue
