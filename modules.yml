@@ -9,9 +9,11 @@
         dir:  https://github.com/octolab/pkg/tree/master{/dir}
         file: https://github.com/octolab/pkg/tree/master{/dir}/{file}#L{line}
   packages:
+    - go.octolab.org
     - go.octolab.org/async
     - go.octolab.org/context
     - go.octolab.org/encoding
+    - go.octolab.org/env
     - go.octolab.org/errors
     - go.octolab.org/fn
     - go.octolab.org/fn/timer
@@ -25,6 +27,7 @@
     - go.octolab.org/strings/bytes
     - go.octolab.org/strings/numd
     - go.octolab.org/sync
+    - go.octolab.org/testing
     - go.octolab.org/time
     - go.octolab.org/unsafe
   tags: [ octolab, toolkit, go ]
