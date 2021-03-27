@@ -301,15 +301,20 @@
     - go.octolab.org/toolset/maintainer/internal
     - go.octolab.org/toolset/maintainer/internal/cmd
     - go.octolab.org/toolset/maintainer/internal/cmd/github
-    - go.octolab.org/toolset/maintainer/internal/cmd/github/labels
     - go.octolab.org/toolset/maintainer/internal/cmd/golang
+    - go.octolab.org/toolset/maintainer/internal/cmd/hub
     - go.octolab.org/toolset/maintainer/internal/cmd/makefile
     - go.octolab.org/toolset/maintainer/internal/cnf
-    - go.octolab.org/toolset/maintainer/internal/entity/github
     - go.octolab.org/toolset/maintainer/internal/entity/golang
     - go.octolab.org/toolset/maintainer/internal/entity/golang/vanity
-    - go.octolab.org/toolset/maintainer/internal/errors
-    - go.octolab.org/toolset/maintainer/internal/github
+    - go.octolab.org/toolset/maintainer/internal/model/bitbucket
+    - go.octolab.org/toolset/maintainer/internal/model/git
+    - go.octolab.org/toolset/maintainer/internal/model/github
+    - go.octolab.org/toolset/maintainer/internal/model/gitlab
+    - go.octolab.org/toolset/maintainer/internal/pkg/assert
+    - go.octolab.org/toolset/maintainer/internal/service/git
+    - go.octolab.org/toolset/maintainer/internal/service/git/provider
+    - go.octolab.org/toolset/maintainer/internal/service/github
   tags: [ octolab, toolset, go, cli, tool, github ]
 
 - prefix: go.octolab.org/toolset/parallel
