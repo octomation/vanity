@@ -1,0 +1,360 @@
+---
+
+- prefix: go.octolab.org
+  import:
+    - url: https://github.com/octolab/pkg
+      vcs: git
+      source:
+        url:  https://github.com/octolab/pkg
+        dir:  https://github.com/octolab/pkg/tree/master{/dir}
+        file: https://github.com/octolab/pkg/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org
+    - go.octolab.org/async
+    - go.octolab.org/context
+    - go.octolab.org/encoding
+    - go.octolab.org/env
+    - go.octolab.org/errors
+    - go.octolab.org/fn
+    - go.octolab.org/fn/timer
+    - go.octolab.org/io
+    - go.octolab.org/pointer
+    - go.octolab.org/runtime
+    - go.octolab.org/safe
+    - go.octolab.org/sequence
+    - go.octolab.org/sequence/generator
+    - go.octolab.org/strings
+    - go.octolab.org/strings/bytes
+    - go.octolab.org/strings/numd
+    - go.octolab.org/sync
+    - go.octolab.org/testing
+    - go.octolab.org/time
+    - go.octolab.org/unsafe
+  tags: [ octolab, toolkit, go ]
+
+- prefix: go.octolab.org/ecosystem/click
+  import:
+    - url: https://github.com/octopot/click
+      vcs: git
+      source:
+        url:  https://github.com/octopot/click
+        dir:  https://github.com/octopot/click/tree/master{/dir}
+        file: https://github.com/octopot/click/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/ecosystem/click
+    - go.octolab.org/ecosystem/click/cmd/client
+    - go.octolab.org/ecosystem/click/cmd/server
+    - go.octolab.org/ecosystem/click/internal/cmd
+    - go.octolab.org/ecosystem/click/internal/config
+    - go.octolab.org/ecosystem/click/internal/domain
+    - go.octolab.org/ecosystem/click/internal/errors
+    - go.octolab.org/ecosystem/click/internal/generated
+    - go.octolab.org/ecosystem/click/internal/server
+    - go.octolab.org/ecosystem/click/internal/server/grpc
+    - go.octolab.org/ecosystem/click/internal/server/grpc/middleware
+    - go.octolab.org/ecosystem/click/internal/server/router
+    - go.octolab.org/ecosystem/click/internal/server/router/chi
+    - go.octolab.org/ecosystem/click/internal/server/router/chi/middleware
+    - go.octolab.org/ecosystem/click/internal/service
+    - go.octolab.org/ecosystem/click/internal/service/types
+    - go.octolab.org/ecosystem/click/internal/static
+    - go.octolab.org/ecosystem/click/internal/storage
+    - go.octolab.org/ecosystem/click/internal/storage/executor
+    - go.octolab.org/ecosystem/click/internal/storage/executor/internal/postgres
+    - go.octolab.org/ecosystem/click/internal/storage/query
+    - go.octolab.org/ecosystem/click/internal/storage/types
+    - go.octolab.org/ecosystem/click/internal/transfer
+    - go.octolab.org/ecosystem/click/internal/transfer/api/v1
+    - go.octolab.org/ecosystem/click/internal/transport
+    - go.octolab.org/ecosystem/click/internal/transport/grpc/middleware
+    - go.octolab.org/ecosystem/click/internal/transport/grpc/protobuf
+    - go.octolab.org/ecosystem/click/internal/transport/http/monitor
+    - go.octolab.org/ecosystem/click/internal/transport/http/profiler
+  tags: [ octolab, ecosystem, go, service ]
+
+- prefix: go.octolab.org/ecosystem/forma
+  import:
+    - url: https://github.com/octopot/forma
+      vcs: git
+      source:
+        url:  https://github.com/octopot/forma
+        dir:  https://github.com/octopot/forma/tree/master{/dir}
+        file: https://github.com/octopot/forma/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/ecosystem/forma/cmd/client
+    - go.octolab.org/ecosystem/forma/cmd/server
+    - go.octolab.org/ecosystem/forma/internal/cmd
+    - go.octolab.org/ecosystem/forma/internal/cmd/legacy
+    - go.octolab.org/ecosystem/forma/internal/config
+    - go.octolab.org/ecosystem/forma/internal/domain
+    - go.octolab.org/ecosystem/forma/internal/errors
+    - go.octolab.org/ecosystem/forma/internal/generated
+    - go.octolab.org/ecosystem/forma/internal/server
+    - go.octolab.org/ecosystem/forma/internal/server/grpc
+    - go.octolab.org/ecosystem/forma/internal/server/grpc/middleware
+    - go.octolab.org/ecosystem/forma/internal/server/middleware
+    - go.octolab.org/ecosystem/forma/internal/server/router
+    - go.octolab.org/ecosystem/forma/internal/server/router/chi
+    - go.octolab.org/ecosystem/forma/internal/server/router/chi/middleware
+    - go.octolab.org/ecosystem/forma/internal/service
+    - go.octolab.org/ecosystem/forma/internal/service/types
+    - go.octolab.org/ecosystem/forma/internal/static
+    - go.octolab.org/ecosystem/forma/internal/storage
+    - go.octolab.org/ecosystem/forma/internal/storage/executor
+    - go.octolab.org/ecosystem/forma/internal/storage/executor/internal/postgres
+    - go.octolab.org/ecosystem/forma/internal/storage/query
+    - go.octolab.org/ecosystem/forma/internal/storage/types
+    - go.octolab.org/ecosystem/forma/internal/transfer/api/v1
+    - go.octolab.org/ecosystem/forma/internal/transfer/encoding
+    - go.octolab.org/ecosystem/forma/internal/transport
+    - go.octolab.org/ecosystem/forma/internal/transport/grpc/middleware
+    - go.octolab.org/ecosystem/forma/internal/transport/grpc/protobuf
+    - go.octolab.org/ecosystem/forma/internal/transport/http/monitor
+    - go.octolab.org/ecosystem/forma/internal/transport/http/profiler
+  tags: [ octolab, ecosystem, go, service ]
+
+- prefix: go.octolab.org/ecosystem/guard
+  import:
+    - url: https://github.com/octopot/guard
+      vcs: git
+      source:
+        url:  https://github.com/octopot/guard
+        dir:  https://github.com/octopot/guard/tree/master{/dir}
+        file: https://github.com/octopot/guard/blob/master{/dir}{{.Dir}}/{file}#L{line}
+  packages:
+    - go.octolab.org/ecosystem/guard/cmd/client
+    - go.octolab.org/ecosystem/guard/cmd/server
+    - go.octolab.org/ecosystem/guard/internal/cmd
+    - go.octolab.org/ecosystem/guard/internal/cmd/legacy
+    - go.octolab.org/ecosystem/guard/internal/config
+    - go.octolab.org/ecosystem/guard/internal/generated
+    - go.octolab.org/ecosystem/guard/internal/platform/errors
+    - go.octolab.org/ecosystem/guard/internal/platform/logger
+    - go.octolab.org/ecosystem/guard/internal/service/guard
+    - go.octolab.org/ecosystem/guard/internal/service/guard/internal
+    - go.octolab.org/ecosystem/guard/internal/service/types
+    - go.octolab.org/ecosystem/guard/internal/service/types/request
+    - go.octolab.org/ecosystem/guard/internal/service/types/response
+    - go.octolab.org/ecosystem/guard/internal/storage
+    - go.octolab.org/ecosystem/guard/internal/storage/internal
+    - go.octolab.org/ecosystem/guard/internal/storage/internal/postgres
+    - go.octolab.org/ecosystem/guard/internal/storage/migrations
+    - go.octolab.org/ecosystem/guard/internal/storage/query
+    - go.octolab.org/ecosystem/guard/internal/storage/types
+    - go.octolab.org/ecosystem/guard/internal/transport
+    - go.octolab.org/ecosystem/guard/internal/transport/grpc/gateway
+    - go.octolab.org/ecosystem/guard/internal/transport/grpc/middleware
+    - go.octolab.org/ecosystem/guard/internal/transport/grpc/protobuf
+    - go.octolab.org/ecosystem/guard/internal/transport/grpc/rpc
+    - go.octolab.org/ecosystem/guard/internal/transport/http/api
+    - go.octolab.org/ecosystem/guard/internal/transport/http/api/internal
+    - go.octolab.org/ecosystem/guard/internal/transport/http/api/internal/chi
+    - go.octolab.org/ecosystem/guard/internal/transport/http/monitor
+    - go.octolab.org/ecosystem/guard/internal/transport/http/profiler
+  tags: [ octolab, ecosystem, go, service ]
+
+- prefix: go.octolab.org/ecosystem/passport
+  import:
+    - url: https://github.com/octopot/passport
+      vcs: git
+      source:
+        url:  https://github.com/octopot/passport
+        dir:  https://github.com/octopot/passport/tree/master{/dir}
+        file: https://github.com/octopot/passport/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/ecosystem/passport/cmd/client
+    - go.octolab.org/ecosystem/passport/cmd/server
+    - go.octolab.org/ecosystem/passport/env/test/smoke
+    - go.octolab.org/ecosystem/passport/internal/cmd
+    - go.octolab.org/ecosystem/passport/internal/config
+    - go.octolab.org/ecosystem/passport/internal/domain
+    - go.octolab.org/ecosystem/passport/internal/errors
+    - go.octolab.org/ecosystem/passport/internal/generated
+    - go.octolab.org/ecosystem/passport/internal/protocol/http
+    - go.octolab.org/ecosystem/passport/internal/protocol/http2
+    - go.octolab.org/ecosystem/passport/internal/protocol/queue
+    - go.octolab.org/ecosystem/passport/internal/protocol/signal
+    - go.octolab.org/ecosystem/passport/internal/server
+    - go.octolab.org/ecosystem/passport/internal/server/router
+    - go.octolab.org/ecosystem/passport/internal/server/router/chi
+    - go.octolab.org/ecosystem/passport/internal/service
+    - go.octolab.org/ecosystem/passport/internal/static
+    - go.octolab.org/ecosystem/passport/internal/storage
+    - go.octolab.org/ecosystem/passport/internal/storage/executor
+    - go.octolab.org/ecosystem/passport/internal/storage/executor/postgres
+    - go.octolab.org/ecosystem/passport/internal/transfer/api/v1/tracker
+  tags: [ octolab, ecosystem, go, service ]
+
+- prefix: go.octolab.org/ecosystem/tablo
+  import:
+    - url: https://github.com/octopot/tablo
+      vcs: git
+      source:
+        url:  https://github.com/octopot/tablo
+        dir:  https://github.com/octopot/tablo/tree/master{/dir}
+        file: https://github.com/octopot/tablo/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/ecosystem/tablo/cmd/client
+    - go.octolab.org/ecosystem/tablo/cmd/server
+    - go.octolab.org/ecosystem/tablo/internal/config
+    - go.octolab.org/ecosystem/tablo/internal/generated/api/v1
+    - go.octolab.org/ecosystem/tablo/internal/generated/api/v2
+    - go.octolab.org/ecosystem/tablo/internal/model
+    - go.octolab.org/ecosystem/tablo/internal/server/v1
+    - go.octolab.org/ecosystem/tablo/internal/service/github
+    - go.octolab.org/ecosystem/tablo/internal/service/trello
+    - go.octolab.org/ecosystem/tablo/internal/storage
+  tags: [ octolab, ecosystem, go, service ]
+
+- prefix: go.octolab.org/platform/evento
+  import:
+    - url: https://github.com/octolab/evento
+      vcs: git
+      source:
+        url:  https://github.com/octolab/evento
+        dir:  https://github.com/octolab/evento/tree/master{/dir}
+        file: https://github.com/octolab/evento/blob/master{/dir}'/{file}#L{line}
+  tags: [ go, octolab, platform ]
+
+- prefix: go.octolab.org/propaganda
+  import:
+    - url: https://github.com/octolab/propaganda
+      vcs: git
+      source:
+        url:  https://github.com/octolab/propaganda
+        dir:  https://github.com/octolab/propaganda/tree/master{/dir}
+        file: https://github.com/octolab/propaganda/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/propaganda
+  tags: [ octolab, go, module, http, middleware, round-trip, headers ]
+
+- prefix: go.octolab.org/toolkit/cli
+  import:
+    - url: https://github.com/octolab/cli
+      vcs: git
+      source:
+        url:  https://github.com/octolab/cli
+        dir:  https://github.com/octolab/cli/tree/master{/dir}
+        file: https://github.com/octolab/cli/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolkit/cli/cobra
+    - go.octolab.org/toolkit/cli/debugger
+  tags: [ octolab, toolkit, go, cli ]
+
+- prefix: go.octolab.org/toolkit/config
+  import:
+    - url: https://github.com/octolab/config
+      vcs: git
+      source:
+        url:  https://github.com/octolab/config
+        dir:  https://github.com/octolab/config/tree/master{/dir}
+        file: https://github.com/octolab/config/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolkit/config
+    - go.octolab.org/toolkit/config/http
+  tags: [ octolab, toolkit, go, config, http ]
+
+- prefix: go.octolab.org/toolkit/protocol
+  import:
+    - url: https://github.com/octolab/protocol
+      vcs: git
+      source:
+        url:  https://github.com/octolab/protocol
+        dir:  https://github.com/octolab/protocol/tree/master{/dir}
+        file: https://github.com/octolab/protocol/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolkit/protocol/http
+    - go.octolab.org/toolkit/protocol/http/header
+    - go.octolab.org/toolkit/protocol/http/middleware
+    - go.octolab.org/toolkit/protocol/http/middleware/chi
+    - go.octolab.org/toolkit/protocol/http/router
+    - go.octolab.org/toolkit/protocol/http/router/rest
+    - go.octolab.org/toolkit/protocol/http/server
+    - go.octolab.org/toolkit/protocol/protobuf
+  tags: [ octolab, toolkit, go, protocol, http, rest, rpc, grpc ]
+
+- prefix: go.octolab.org/toolset/breakit
+  import:
+    - url: https://github.com/octolab/breakit
+      vcs: git
+      source:
+        url:  https://github.com/octolab/breakit
+        dir:  https://github.com/octolab/breakit/tree/master{/dir}
+        file: https://github.com/octolab/breakit/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolset/breakit
+    - go.octolab.org/toolset/breakit/internal
+    - go.octolab.org/toolset/breakit/internal/cmd
+    - go.octolab.org/toolset/breakit/internal/cnf
+  tags: [ octolab, toolset, go, cli, tool, daemon, limited ]
+
+- prefix: go.octolab.org/toolset/maintainer
+  import:
+    - url: https://github.com/octomation/maintainer
+      vcs: git
+      source:
+        url:  https://github.com/octomation/maintainer
+        dir:  https://github.com/octomation/maintainer/tree/master{/dir}
+        file: https://github.com/octomation/maintainer/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolset/maintainer
+    - go.octolab.org/toolset/maintainer/internal
+    - go.octolab.org/toolset/maintainer/internal/cmd
+    - go.octolab.org/toolset/maintainer/internal/cmd/github
+    - go.octolab.org/toolset/maintainer/internal/cmd/golang
+    - go.octolab.org/toolset/maintainer/internal/cmd/hub
+    - go.octolab.org/toolset/maintainer/internal/cmd/makefile
+    - go.octolab.org/toolset/maintainer/internal/cnf
+    - go.octolab.org/toolset/maintainer/internal/entity/golang
+    - go.octolab.org/toolset/maintainer/internal/entity/golang/vanity
+    - go.octolab.org/toolset/maintainer/internal/model/bitbucket
+    - go.octolab.org/toolset/maintainer/internal/model/git
+    - go.octolab.org/toolset/maintainer/internal/model/github
+    - go.octolab.org/toolset/maintainer/internal/model/gitlab
+    - go.octolab.org/toolset/maintainer/internal/pkg/assert
+    - go.octolab.org/toolset/maintainer/internal/service/git
+    - go.octolab.org/toolset/maintainer/internal/service/git/provider
+    - go.octolab.org/toolset/maintainer/internal/service/github
+  tags: [ octolab, toolset, go, cli, tool, github ]
+
+- prefix: go.octolab.org/toolset/parallel
+  import:
+    - url: https://github.com/octolab/parallel
+      vcs: git
+      source:
+        url:  https://github.com/octolab/parallel
+        dir:  https://github.com/octolab/parallel/tree/master{/dir}
+        file: https://github.com/octolab/parallel/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolset/parallel
+    - go.octolab.org/toolset/parallel/internal/cmd
+  tags: [ octolab, toolset, go, cli, tool, parallel, execution ]
+
+- prefix: go.octolab.org/toolset/testit
+  import:
+    - url: https://github.com/octolab/testit
+      vcs: git
+      source:
+        url:  https://github.com/octolab/testit
+        dir:  https://github.com/octolab/testit/tree/master{/dir}
+        file: https://github.com/octolab/testit/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolset/testit
+    - go.octolab.org/toolset/testit/internal
+    - go.octolab.org/toolset/testit/internal/cmd
+    - go.octolab.org/toolset/testit/internal/cnf
+  tags: [ octolab, toolset, go, cli, tool, test ]
+
+- prefix: go.octolab.org/toolset/try
+  import:
+    - url: https://github.com/octolab/try
+      vcs: git
+      source:
+        url:  https://github.com/octolab/try
+        dir:  https://github.com/octolab/try/tree/master{/dir}
+        file: https://github.com/octolab/try/blob/master{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/toolset/try
+    - go.octolab.org/toolset/try/generate
+    - go.octolab.org/toolset/try/internal/cmd
+  tags: [ octolab, toolset, go, cli, tool, retry, repeat, execution ]
