@@ -1,3 +1,3 @@
 [submodule "src/go-module"]
 	path = src/go-module
-	url = git@github.com:octomation/go-module.git
+	url = https://github.com/octomation/go-module.git

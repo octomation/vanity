@@ -32,46 +32,6 @@
     - go.octolab.org/unsafe
   tags: [ octolab, toolkit, go ]
 
-- prefix: go.octolab.org/ecosystem/click
-  import:
-    - url: https://github.com/octopot/click
-      vcs: git
-      source:
-        url:  https://github.com/octopot/click
-        dir:  https://github.com/octopot/click/tree/master{/dir}
-        file: https://github.com/octopot/click/blob/master{/dir}/{file}#L{line}
-  packages:
-    - go.octolab.org/ecosystem/click
-    - go.octolab.org/ecosystem/click/cmd/client
-    - go.octolab.org/ecosystem/click/cmd/server
-    - go.octolab.org/ecosystem/click/internal/cmd
-    - go.octolab.org/ecosystem/click/internal/config
-    - go.octolab.org/ecosystem/click/internal/domain
-    - go.octolab.org/ecosystem/click/internal/errors
-    - go.octolab.org/ecosystem/click/internal/generated
-    - go.octolab.org/ecosystem/click/internal/server
-    - go.octolab.org/ecosystem/click/internal/server/grpc
-    - go.octolab.org/ecosystem/click/internal/server/grpc/middleware
-    - go.octolab.org/ecosystem/click/internal/server/router
-    - go.octolab.org/ecosystem/click/internal/server/router/chi
-    - go.octolab.org/ecosystem/click/internal/server/router/chi/middleware
-    - go.octolab.org/ecosystem/click/internal/service
-    - go.octolab.org/ecosystem/click/internal/service/types
-    - go.octolab.org/ecosystem/click/internal/static
-    - go.octolab.org/ecosystem/click/internal/storage
-    - go.octolab.org/ecosystem/click/internal/storage/executor
-    - go.octolab.org/ecosystem/click/internal/storage/executor/internal/postgres
-    - go.octolab.org/ecosystem/click/internal/storage/query
-    - go.octolab.org/ecosystem/click/internal/storage/types
-    - go.octolab.org/ecosystem/click/internal/transfer
-    - go.octolab.org/ecosystem/click/internal/transfer/api/v1
-    - go.octolab.org/ecosystem/click/internal/transport
-    - go.octolab.org/ecosystem/click/internal/transport/grpc/middleware
-    - go.octolab.org/ecosystem/click/internal/transport/grpc/protobuf
-    - go.octolab.org/ecosystem/click/internal/transport/http/monitor
-    - go.octolab.org/ecosystem/click/internal/transport/http/profiler
-  tags: [ octolab, ecosystem, go, service ]
-
 - prefix: go.octolab.org/ecosystem/forma
   import:
     - url: https://github.com/octopot/forma
@@ -205,16 +165,6 @@
     - go.octolab.org/ecosystem/tablo/internal/service/trello
     - go.octolab.org/ecosystem/tablo/internal/storage
   tags: [ octolab, ecosystem, go, service ]
-
-- prefix: go.octolab.org/platform/evento
-  import:
-    - url: https://github.com/octolab/evento
-      vcs: git
-      source:
-        url:  https://github.com/octolab/evento
-        dir:  https://github.com/octolab/evento/tree/master{/dir}
-        file: https://github.com/octolab/evento/blob/master{/dir}'/{file}#L{line}
-  tags: [ go, octolab, platform ]
 
 - prefix: go.octolab.org/propaganda
   import:
