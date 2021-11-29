@@ -1,5 +1,5 @@
 .DEFAULT_GOAL = compile
 
 compile:
-	@maintainer go vanity build
+	@pushd dist; maintainer go vanity build -f ../modules.yml; popd
 .PHONY: compile
