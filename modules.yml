@@ -178,6 +178,18 @@
     - go.octolab.org/propaganda
   tags: [ octolab, go, module, http, middleware, round-trip, headers ]
 
+- prefix: go.octolab.org/template/module
+  import:
+    - url: https://github.com/octomation/go-module
+      vcs: git
+      source:
+        url:  https://github.com/octomation/go-module
+        dir:  https://github.com/octomation/go-module/tree/main{/dir}
+        file: https://github.com/octomation/go-module/blob/main{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/template/module
+  tags: [ octolab, go, golang, template, module, hacktoberfest ]
+
 - prefix: go.octolab.org/toolkit/cli
   import:
     - url: https://github.com/octolab/cli
