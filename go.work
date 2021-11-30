@@ -1,0 +1,7 @@
+go 1.20
+
+use (
+	./src/go-module
+	./src/go-service
+	./src/go-tool
+)
