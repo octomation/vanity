@@ -12,7 +12,7 @@ on:
     branches: [ main ]
     paths:
       - '.github/workflows/cd.yml'
-      - 'dist/**'
+      - 'dist/**/*'
     tags: [ '!*' ]
 
   schedule:
