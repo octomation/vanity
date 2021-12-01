@@ -206,6 +206,23 @@
     - go.octolab.org/template/tool/internal/config
   tags: [ octolab, go, golang, template, cli, tool, hacktoberfest ]
 
+- prefix: go.octolab.org/template/service
+  import:
+    - url: https://github.com/octomation/go-service
+      vcs: git
+      source:
+        url:  https://github.com/octomation/go-service
+        dir:  https://github.com/octomation/go-service/tree/main{/dir}
+        file: https://github.com/octomation/go-service/blob/main{/dir}/{file}#L{line}
+  packages:
+    - go.octolab.org/template/service
+    - go.octolab.org/template/service/cmd/client
+    - go.octolab.org/template/service/cmd/server
+    - go.octolab.org/template/service/internal/command
+    - go.octolab.org/template/service/internal/config
+    - go.octolab.org/template/service/internal/generated
+  tags: [ octolab, go, golang, template, service, hacktoberfest ]
+
 - prefix: go.octolab.org/toolkit/cli
   import:
     - url: https://github.com/octolab/cli
