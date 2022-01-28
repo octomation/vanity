@@ -1,18 +1,25 @@
 [submodule "src/go-module"]
+	name = go.octolab.org/template/module
 	path = src/go-module
 	url = git@github.com:octomation/go-module.git
 [submodule "src/go-tool"]
+	name = go.octolab.org/template/tool
 	path = src/go-tool
 	url = git@github.com:octomation/go-tool.git
 [submodule "src/go-service"]
+	name = go.octolab.org/template/service
 	path = src/go-service
 	url = git@github.com:octomation/go-service.git
+
 [submodule "src/beads"]
+	name = go.octolab.org/ecosystem/beads
 	path = src/beads
 	url = git@github.com:tact-app/beads.git
-[submodule "src/tact"]
-	path = src/tact
-	url = git@github.com:tact-app/service.git
 [submodule "src/inbox"]
+	name = go.octolab.org/template/inbox
 	path = src/inbox
 	url = git@github.com:tact-app/inbox.git
+[submodule "src/tact"]
+	name = go.octolab.org/ecosystem/tact
+	path = src/tact
+	url = git@github.com:tact-app/service.git
