@@ -10,3 +10,6 @@
 [submodule "src/beads"]
 	path = src/beads
 	url = git@github.com:tact-app/beads.git
+[submodule "src/tact"]
+	path = src/tact
+	url = git@github.com:tact-app/service.git
