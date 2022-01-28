@@ -7,3 +7,6 @@
 [submodule "src/go-service"]
 	path = src/go-service
 	url = git@github.com:octomation/go-service.git
+[submodule "src/beads"]
+	path = src/beads
+	url = git@github.com:tact-app/beads.git
