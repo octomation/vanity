@@ -13,3 +13,6 @@
 [submodule "src/tact"]
 	path = src/tact
 	url = git@github.com:tact-app/service.git
+[submodule "src/inbox"]
+	path = src/inbox
+	url = git@github.com:tact-app/inbox.git
