@@ -11,6 +11,10 @@
 	path = src/go-service
 	url = git@github.com:octomation/go-service.git
 
+[submodule "src/tablo"]
+	path = src/tablo
+	url = git@github.com:octomation/tablo.git
+
 [submodule "src/beads"]
 	name = go.octolab.org/ecosystem/beads
 	path = src/beads
