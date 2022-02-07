@@ -10,11 +10,10 @@
 	name = go.octolab.org/template/service
 	path = src/go-service
 	url = git@github.com:octomation/go-service.git
-
-[submodule "src/tablo"]
-	name = go.octolab.org/ecosystem/tablo
-	path = src/tablo
-	url = git@github.com:octomation/tablo.git
+[submodule "src/inbox"]
+	name = go.octolab.org/template/inbox
+	path = src/inbox
+	url = git@github.com:tact-app/inbox.git
 
 [submodule "src/beads"]
 	name = go.octolab.org/ecosystem/beads
@@ -24,11 +23,16 @@
 	name = go.octolab.org/ecosystem/click
 	path = src/click
 	url = git@github.com:tact-app/click.git
-[submodule "src/inbox"]
-	name = go.octolab.org/template/inbox
-	path = src/inbox
-	url = git@github.com:tact-app/inbox.git
+[submodule "src/tablo"]
+	name = go.octolab.org/ecosystem/tablo
+	path = src/tablo
+	url = git@github.com:octomation/tablo.git
 [submodule "src/tact"]
 	name = go.octolab.org/ecosystem/tact
 	path = src/tact
 	url = git@github.com:tact-app/service.git
+
+[submodule "src/airseat"]
+	name = go.octolab.org/toolset/airseat
+	path = src/airseat
+	url = git@github.com:tact-app/airseat.git
