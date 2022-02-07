@@ -44,3 +44,7 @@
 	name = go.octolab.org/tact/loop*
 	path = src/loop
 	url = git@github.com:tact-app/loop.git
+[submodule "src/optflow"]
+	name = go.octolab.org/toolset/optflow
+	path = src/optflow
+	url = git@github.com:tact-app/optflow.git
