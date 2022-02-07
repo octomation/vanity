@@ -40,3 +40,7 @@
 	name = go.octolab.org/toolset/fiddle
 	path = src/fiddle
 	url = git@github.com:octomation/fiddle.git
+[submodule "src/loop"]
+	name = go.octolab.org/tact/loop*
+	path = src/loop
+	url = git@github.com:tact-app/loop.git
