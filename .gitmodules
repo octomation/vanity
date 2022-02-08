@@ -48,3 +48,7 @@
 	name = go.octolab.org/toolset/optflow
 	path = src/optflow
 	url = git@github.com:tact-app/optflow.git
+[submodule "src/secret"]
+	name = go.octolab.org/toolset/secret
+	path = src/secret
+	url = git@github.com:tact-app/secret.git
