@@ -52,3 +52,8 @@
 	name = go.octolab.org/toolset/secret
 	path = src/secret
 	url = git@github.com:tact-app/secret.git
+
+[submodule "src/inboxes/trello"]
+	name = go.octolab.org/tact/inbox/trello
+	path = src/inboxes/trello
+	url = git@github.com:tact-app/trello.git
