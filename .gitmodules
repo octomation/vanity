@@ -44,6 +44,10 @@
 	name = go.octolab.org/toolset/loop
 	path = src/loop
 	url = git@github.com:tact-app/loop.git
+[submodule "src/maintainer"]
+	name = go.octolab.org/toolset/maintainer
+	path = src/maintainer
+	url = git@github.com:octomation/maintainer.git
 [submodule "src/optflow"]
 	name = go.octolab.org/toolset/optflow
 	path = src/optflow
