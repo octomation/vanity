@@ -27,6 +27,10 @@
 	name = go.octolab.org/ecosystem/forma
 	path = src/forma
 	url = git@github.com:octopot/forma.git
+[submodule "src/guard"]
+	name = go.octolab.org/ecosystem/guard
+	path = src/guard
+	url = git@github.com:octopot/guard.git
 [submodule "src/tablo"]
 	name = go.octolab.org/ecosystem/tablo
 	path = src/tablo
