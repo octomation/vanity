@@ -98,3 +98,7 @@
 	name = go.octolab.org/propaganda
 	path = src/propaganda
 	url = git@github.com:octolab/propaganda.git
+[submodule "src/cli"]
+	name = go.octolab.org/toolkit/cli
+	path = src/cli
+	url = git@github.com:octolab/cli.git
