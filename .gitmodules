@@ -64,6 +64,10 @@
 	name = go.octolab.org/toolset/optflow
 	path = src/optflow
 	url = git@github.com:tact-app/optflow.git
+[submodule "src/parallel"]
+	name = go.octolab.org/toolset/parallel
+	path = src/parallel
+	url = git@github.com:octolab/parallel.git
 [submodule "src/secret"]
 	name = go.octolab.org/toolset/secret
 	path = src/secret
