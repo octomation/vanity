@@ -48,6 +48,10 @@
 	name = go.octolab.org/toolset/airseat
 	path = src/airseat
 	url = git@github.com:tact-app/airseat.git
+[submodule "src/breakit"]
+	name = go.octolab.org/toolset/breakit
+	path = src/breakit
+	url = git@github.com:octolab/breakit.git
 [submodule "src/fiddle"]
 	name = go.octolab.org/toolset/fiddle
 	path = src/fiddle
