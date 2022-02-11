@@ -23,6 +23,10 @@
 	name = go.octolab.org/ecosystem/click
 	path = src/click
 	url = git@github.com:tact-app/click.git
+[submodule "src/forma"]
+	name = go.octolab.org/ecosystem/forma
+	path = src/forma
+	url = git@github.com:octopot/forma.git
 [submodule "src/tablo"]
 	name = go.octolab.org/ecosystem/tablo
 	path = src/tablo
