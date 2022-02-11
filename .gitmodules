@@ -76,6 +76,10 @@
 	name = go.octolab.org/toolset/secret
 	path = src/secret
 	url = git@github.com:tact-app/secret.git
+[submodule "src/testit"]
+	name = go.octolab.org/toolset/testit
+	path = src/testit
+	url = git@github.com:octolab/testit.git
 [submodule "src/try"]
 	name = go.octolab.org/toolset/try
 	path = src/try
