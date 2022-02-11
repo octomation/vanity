@@ -93,3 +93,8 @@
 	name = go.octolab.org/tact/inbox/trello
 	path = src/inboxes/trello
 	url = git@github.com:tact-app/trello.git
+
+[submodule "src/propaganda"]
+	name = go.octolab.org/propaganda
+	path = src/propaganda
+	url = git@github.com:octolab/propaganda.git
