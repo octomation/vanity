@@ -94,6 +94,10 @@
 	path = src/inboxes/trello
 	url = git@github.com:tact-app/trello.git
 
+[submodule "src/pkg"]
+	name = go.octolab.org
+	path = src/pkg
+	url = git@github.com:octolab/pkg.git
 [submodule "src/cli"]
 	name = go.octolab.org/toolkit/cli
 	path = src/cli
