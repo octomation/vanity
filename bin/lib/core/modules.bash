@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
 modules() {
-  local git module name url
+  local module name path git url
   for module in $(@modules); do
     name=$(
       git config --file .gitmodules --get-regexp "submodule\.${module}\.name" |
+        awk '{print $2}'
+    )
+    path=$(
+      git config --file .gitmodules --get-regexp "submodule\.${module}\.path" |
         awk '{print $2}'
     )
     git=$(
@@ -16,8 +20,7 @@ modules() {
         sed -e 's|:|/|' -e 's|^git@|https://|' -e 's|\.git$||'
     )
 
-    if ! go list -m | grep -q "${name}"; then continue; fi
-    if [ "${name}" == 'go.octolab.org' ]; then continue; fi
+    if ! go list -m | grep -q "^${name}$"; then continue; fi
 
     local branch tags packages
     branch=$(
@@ -31,7 +34,7 @@ modules() {
         "${git}"
     )
     packages=$'\n'
-    packages+=$(go list "${name}/..." | sed 's|^|    - |')
+    packages+=$(go list "./${path}/..." | sed 's|^|    - |')
 
     cat <<EOF
 - prefix: ${name}
