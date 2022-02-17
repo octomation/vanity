@@ -4,6 +4,7 @@ use (
 	./src/airseat
 	./src/beads
 	./src/breakit
+	./src/cli
 	./src/go-module
 	./src/go-service
 	./src/go-tool
