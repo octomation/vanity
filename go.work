@@ -3,6 +3,7 @@ go 1.20
 use (
 	./src/airseat
 	./src/beads
+	./src/breakit
 	./src/go-module
 	./src/go-service
 	./src/go-tool
