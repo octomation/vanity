@@ -6,6 +6,7 @@ use (
 	./src/breakit
 	./src/cli
 	./src/click
+	./src/config
 	./src/go-module
 	./src/go-service
 	./src/go-tool
