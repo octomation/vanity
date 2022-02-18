@@ -5,6 +5,7 @@ use (
 	./src/beads
 	./src/breakit
 	./src/cli
+	./src/click
 	./src/go-module
 	./src/go-service
 	./src/go-tool
