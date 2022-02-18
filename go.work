@@ -8,6 +8,7 @@ use (
 	./src/click
 	./src/config
 	./src/fiddle
+	./src/forma
 	./src/go-module
 	./src/go-service
 	./src/go-tool
