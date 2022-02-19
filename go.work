@@ -12,5 +12,6 @@ use (
 	./src/go-module
 	./src/go-service
 	./src/go-tool
+	./src/guard
 	./src/pkg
 )
