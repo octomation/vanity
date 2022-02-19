@@ -13,5 +13,6 @@ use (
 	./src/go-service
 	./src/go-tool
 	./src/guard
+	./src/inbox
 	./src/pkg
 )
