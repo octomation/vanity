@@ -14,5 +14,6 @@ use (
 	./src/go-tool
 	./src/guard
 	./src/inbox
+	./src/inboxes/github
 	./src/pkg
 )
