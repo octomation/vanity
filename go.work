@@ -17,5 +17,6 @@ use (
 	./src/inboxes/github
 	./src/inboxes/trello
 	./src/loop
+	./src/maintainer
 	./src/pkg
 )
