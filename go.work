@@ -18,5 +18,6 @@ use (
 	./src/inboxes/trello
 	./src/loop
 	./src/maintainer
+	./src/optflow
 	./src/pkg
 )
