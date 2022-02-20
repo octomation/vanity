@@ -19,5 +19,6 @@ use (
 	./src/loop
 	./src/maintainer
 	./src/optflow
+	./src/parallel
 	./src/pkg
 )
