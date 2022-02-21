@@ -24,4 +24,5 @@ use (
 	./src/pkg
 	./src/propaganda
 	./src/protocol
+	./src/secret
 )
