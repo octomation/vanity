@@ -23,4 +23,5 @@ use (
 	./src/passport
 	./src/pkg
 	./src/propaganda
+	./src/protocol
 )
