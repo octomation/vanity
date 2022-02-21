@@ -20,5 +20,6 @@ use (
 	./src/maintainer
 	./src/optflow
 	./src/parallel
+	./src/passport
 	./src/pkg
 )
