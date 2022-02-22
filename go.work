@@ -28,4 +28,5 @@ use (
 	./src/tablo
 	./src/tact
 	./src/testit
+	./src/try
 )
