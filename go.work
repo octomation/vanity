@@ -27,4 +27,5 @@ use (
 	./src/secret
 	./src/tablo
 	./src/tact
+	./src/testit
 )
