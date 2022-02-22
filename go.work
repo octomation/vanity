@@ -26,4 +26,5 @@ use (
 	./src/protocol
 	./src/secret
 	./src/tablo
+	./src/tact
 )
