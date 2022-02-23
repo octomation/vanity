@@ -30,7 +30,7 @@ modules() {
     )
     tags=$(
       gh repo view --json repositoryTopics \
-        --jq '.repositoryTopics| map(.name) | join(", ")' \
+        --jq '.repositoryTopics? | select(. != null) | map(.name) | join(", ")' \
         "${git}"
     )
     packages=$'\n'
