@@ -1,5 +1,6 @@
 .DEFAULT_GOAL = compile
 
+# TODO:feat support --trace flag
 compile:
-	@rm -rf dist/*; pushd dist; maintainer go vanity build -f ../modules.yml; popd
+	@./Taskfile compile
 .PHONY: compile
