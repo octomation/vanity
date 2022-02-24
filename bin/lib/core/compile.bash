@@ -7,5 +7,6 @@ compile() {
 
   pushd dist || exit 1
   maintainer go vanity build -f ../modules.yml
+  tree .
   popd || exit 1
 }
