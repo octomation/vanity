@@ -8,9 +8,9 @@ set -euo pipefail
 }
 
 include=(
-  bin/lib/utils/*.bash
+  bin/lib/config/*.bash
   bin/lib/core/*.bash
-  bin/lib/*.bash
+  bin/lib/main.bash
 )
 
 for script in "${include[@]}"; do

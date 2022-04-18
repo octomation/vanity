@@ -2,11 +2,11 @@
 # shellcheck source=modules.bash # modules
 
 compile() {
-  modules | tee modules.yml
-  rm -rf dist/*
+  mkdir -p dist && rm -rf dist/*
+  modules | tee dist/modules.yml
 
-  pushd dist || exit 1
-  maintainer go vanity build -f ../modules.yml
+  pushd dist >/dev/null || exit 1
+  maintainer go vanity build -f modules.yml
   tree .
-  popd || exit 1
+  popd >/dev/null || exit 1
 }
