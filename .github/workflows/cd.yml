@@ -30,14 +30,19 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
-        with: { fetch-depth: 0 }
+        with:
+          fetch-depth: 0
+          submodules: true
+          token: ${{ secrets.DEPENDABOT_TOKEN }}
       - name: Install dependencies
-        run: curl -sSfL https://install.octolab.org/maintainer | bash -s -- -dx
+        run: curl -sSfL https://install.octolab.org/maintainer | sh -s -- -b /usr/local/bin -dx
       - name: Set up GitHub Pages
         uses: actions/configure-pages@v3
 
       - name: Build static HTML
         run: make
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Upload the documentation
         uses: actions/upload-pages-artifact@v2
         with: { path: dist }
@@ -61,7 +66,7 @@ jobs:
 
   notify:
     name: Notifying
-    needs: [ deploy ]
+    needs: [ build, deploy ]
     runs-on: ubuntu-latest
     if: failure() || success()
 
