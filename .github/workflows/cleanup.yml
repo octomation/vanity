@@ -1,4 +1,4 @@
-name: Workflow invalidation
+name: Workflow cleanup
 
 on:
   workflow_dispatch:
@@ -9,8 +9,8 @@ on:
         options:
           - All
           - Continuous delivery
-          - Workflow invalidation
-        default: Workflow invalidation
+          - Workflow cleanup
+        default: Workflow cleanup
         required: true
       dry_run:
         description: Only log actions, do not perform any delete operations.
@@ -23,7 +23,7 @@ on:
         required: true
 
   schedule:
-    - cron: 0 6 1 * * # at 06:00 on day-of-month 1, UTC
+    - cron: 0 7 1 * * # at 07:00 on day-of-month 1, UTC
 
 jobs:
   delete:
