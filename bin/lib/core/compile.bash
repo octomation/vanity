@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # shellcheck source=modules.bash # modules
 
 compile() {

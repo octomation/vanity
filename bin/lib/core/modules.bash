@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 modules() {
   local module name path git url
   for module in $(@modules); do
