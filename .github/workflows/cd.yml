@@ -42,7 +42,7 @@ jobs:
       - name: Build static HTML
         run: make
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_TOKEN }}
       - name: Upload the documentation
         uses: actions/upload-pages-artifact@v2
         with: { path: dist }
