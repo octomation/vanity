@@ -13,7 +13,7 @@ Vanity URLs for OctoLab's Go modules.
 
 <p align="right">made with ❤️ for everyone by <a href="https://www.octolab.org/">OctoLab</a></p>
 
-[social.preview]:   https://cdn.octolab.org/socialify/vanity.png
+[social.preview]:   https://cdn.octolab.org/repo/vanity.png
 [preview.config]:   https://socialify.git.ci/octomation/vanity?description=1&font=Raleway&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Light
 [preview.fallback]: https://socialify.git.ci/octomation/vanity/image?description=1&font=Raleway&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Light
 
