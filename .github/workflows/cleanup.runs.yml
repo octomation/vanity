@@ -1,4 +1,4 @@
-name: Workflow cleanup
+name: Workflow runs cleanup
 
 on:
   workflow_dispatch:
@@ -9,8 +9,9 @@ on:
         options:
           - All
           - Continuous delivery
-          - Workflow cleanup
-        default: Workflow cleanup
+          - Workflow caches cleanup
+          - Workflow runs cleanup
+        default: Workflow runs cleanup
         required: true
       dry_run:
         description: Only log actions, do not perform any delete operations.
