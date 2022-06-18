@@ -1,14 +1,6 @@
 name: Continuous delivery
 
 on:
-  workflow_dispatch:
-    inputs:
-      reason:
-        description: The reason for dispatching it manually.
-        type: string
-        default: manual healthcheck
-        required: true
-
   push:
     branches: [ main ]
     paths:
@@ -20,6 +12,14 @@ on:
 
   schedule:
     - cron: 0 7 1 * * # at 07:00 on day-of-month 1, UTC
+
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: The reason for dispatching it manually.
+        type: string
+        default: manual healthcheck
+        required: true
 
 concurrency:
   group: pages
