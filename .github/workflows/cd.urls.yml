@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.1
         with:
           fetch-depth: 0
           submodules: true
@@ -41,9 +41,9 @@ jobs:
       - name: Install dependencies
         run: curl -sSfL https://install.octolab.org/maintainer | sh -s -- -b /usr/local/bin -dx
       - name: Set up GitHub Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v3.0.7
       - name: Set up Go environment
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v4.1.0
         with: { go-version: 1.21.x, cache-dependency-path: src/*/go.sum, check-latest: true }
 
       - name: Build static HTML
@@ -51,7 +51,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.DEPENDABOT_TOKEN }}
       - name: Upload the documentation
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v2.0.0
         with: { path: dist }
 
   deploy:
@@ -69,7 +69,7 @@ jobs:
     steps:
       - name: Deploy it to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v2.0.5
 
   notify:
     name: Notifying
@@ -79,7 +79,7 @@ jobs:
 
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.1
         with: { fetch-depth: 0 }
 
       - name: Send notification

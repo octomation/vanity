@@ -47,7 +47,7 @@ runs:
       shell: bash
 
     - name: Send Slack notification
-      uses: rtCamp/action-slack-notify@v2
+      uses: rtCamp/action-slack-notify@v2.2.1
       env:
         SLACK_COLOR: ${{ inputs.success == 'true' && 'success' || 'failure' }}
         SLACK_FOOTER: made with ❤️ for everyone by <https://www.octolab.org/|OctoLab>
