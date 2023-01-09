@@ -1,0 +1,91 @@
+name: Continuous delivery
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/cd.urls.yml'
+      - 'bin/lib/**/*.bash'
+      - 'src/**/*'
+      - 'go.work'
+      - 'Makefile'
+      - 'Taskfile'
+
+  schedule:
+    - cron: 0 7 1 * * # at 07:00 on day-of-month 1, UTC
+
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: The reason for dispatching it manually.
+        type: string
+        default: manual healthcheck
+        required: true
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Building
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: true
+          token: ${{ secrets.DEPENDABOT_TOKEN }}
+      - name: Install dependencies
+        run: curl -sSfL https://install.octolab.org/maintainer | sh -s -- -b /usr/local/bin -dx
+      - name: Set up GitHub Pages
+        uses: actions/configure-pages@v3
+      - name: Set up Go environment
+        uses: actions/setup-go@v4
+        with: { go-version: 1.21.x, cache-dependency-path: src/*/go.sum, check-latest: true }
+
+      - name: Build static HTML
+        run: make
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_TOKEN }}
+      - name: Upload the documentation
+        uses: actions/upload-pages-artifact@v2
+        with: { path: dist }
+
+  deploy:
+    name: Deploying
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
+
+    steps:
+      - name: Deploy it to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+
+  notify:
+    name: Notifying
+    needs: [ build, deploy ]
+    runs-on: ubuntu-latest
+    if: failure() || success()
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Send notification
+        uses: ./.github/actions/notify
+        continue-on-error: true
+        with:
+          emoji: 🤴
+          channel: ${{ secrets.SLACK_WEBHOOK }}
+          success: ${{ ! contains(needs.*.result, 'failure') }}

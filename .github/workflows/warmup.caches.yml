@@ -1,0 +1,54 @@
+name: Workflow caches warmup
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: The reason for dispatching it manually.
+        type: string
+        default: manual healthcheck
+        required: true
+
+  workflow_run:
+    workflows: [ Workflow caches cleanup ]
+    types: [ completed ]
+
+jobs:
+  cache:
+    name: Caching Go modules
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: true
+          token: ${{ secrets.DEPENDABOT_TOKEN }}
+      - name: Set up Go environment
+        uses: actions/setup-go@v4
+        with: { go-version: 1.21.x, cache-dependency-path: src/*/go.sum, check-latest: true }
+
+      - name: Fetch dependencies
+        run: make list
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_TOKEN }}
+
+  notify:
+    name: Notifying
+    needs: [ cache ]
+    runs-on: ubuntu-latest
+    if: failure() || success()
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Send notification
+        uses: ./.github/actions/notify
+        continue-on-error: true
+        with:
+          emoji: ♻️
+          channel: ${{ secrets.SLACK_WEBHOOK }}
+          success: ${{ ! contains(needs.*.result, 'failure') }}
