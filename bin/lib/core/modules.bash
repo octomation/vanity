@@ -18,7 +18,7 @@ modules() {
         sed -e 's|:|/|' -e 's|^git@|https://|' -e 's|\.git$||'
     )
 
-    if ! go list -mod=readonly -m | grep -q "^${name}$"; then continue; fi
+    if ! go list -m | grep -q "^${name}$"; then continue; fi
 
     local branch tags packages
     branch=$(
@@ -32,7 +32,7 @@ modules() {
         "${git}"
     )
     packages=$'\n'
-    packages+=$(go list -mod=readonly "./${path}/..." | sed 's|^|    - |')
+    packages+=$(go list "./${path}/..." | sed 's|^|    - |')
 
     cat <<EOF
 - prefix: ${name}
