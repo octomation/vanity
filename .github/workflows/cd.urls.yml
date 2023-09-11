@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - '.github/workflows/cd.yml'
+      - '.github/workflows/cd.urls.yml'
       - 'bin/lib/**/*.bash'
       - 'src/**/*'
       - 'Makefile'
