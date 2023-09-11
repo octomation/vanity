@@ -7,6 +7,7 @@ on:
       - '.github/workflows/cd.urls.yml'
       - 'bin/lib/**/*.bash'
       - 'src/**/*'
+      - 'go.work'
       - 'Makefile'
       - 'Taskfile'
 
