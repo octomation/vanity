@@ -35,6 +35,10 @@
 	name = go.octolab.org/ecosystem/passport
 	path = src/passport
 	url = git@github.com:octopot/passport.git
+[submodule "src/sparkle"]
+	name = go.octolab.org/ecosystem/sparkle
+	path = src/sparkle
+	url = git@github.com:withsparkle/service.git
 [submodule "src/tablo"]
 	name = go.octolab.org/ecosystem/tablo
 	path = src/tablo
