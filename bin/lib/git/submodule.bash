@@ -8,5 +8,5 @@
   git submodule deinit -f "${submodule}"
   rm -rf ".git/modules/${submodule}"
   git rm -f "${submodule}"
-  git config -f .gitmodules --remove-section "submodule.${submodule}"
+  git config -f .gitmodules --remove-section "submodule.${submodule}" || true
 }
